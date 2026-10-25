@@ -19,7 +19,11 @@ st.set_page_config(
 )
 
 load_dotenv()
-API_KEY = os.getenv("GROQ_API_KEY")
+
+try:
+    API_KEY = st.secrets["GROQ_API_KEY"]
+except (KeyError, FileNotFoundError):
+    API_KEY = os.getenv("GROQ_API_KEY")
 MODEL = "openai/gpt-oss-120b"
 
 # ---------------- DATA SCHEMAS ----------------
