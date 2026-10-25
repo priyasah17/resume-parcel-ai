@@ -1,0 +1,20 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Resume files and personal information
+resumes/
+*.pdf
+*.docx
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
